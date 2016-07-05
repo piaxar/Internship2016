@@ -1,0 +1,45 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="cheque_text_view_style">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/text_size</item>
+    </style>
+
+    <style name="text_view_dish_name_style" parent="cheque_text_view_style">
+        <item name="android:background">@color/cheque_first_column</item>
+        <item name="android:paddingLeft">@dimen/space_between_columns</item>
+        <item name="android:gravity">left</item>
+    </style>
+
+    <style name="text_view_one_dish_price_style" parent="cheque_text_view_style">
+        <item name="android:background">@color/cheque_second_column</item>
+        <item name="android:layout_marginLeft">@dimen/space_between_columns</item>
+    </style>
+
+    <style name="text_view_total_dish_price_style" parent="cheque_text_view_style">
+        <item name="android:background">@color/cheque_third_column</item>
+        <item name="android:layout_marginLeft">@dimen/space_between_columns</item>
+    </style>
+
+    <style name="grid_view_products">
+        <item name="android:numColumns">5</item>
+    </style>
+
+</resources>

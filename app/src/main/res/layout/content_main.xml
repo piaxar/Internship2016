@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/linear_layout_cheque_panel"
+        android:layout_width="@dimen/linear_layout_cheque_panel_width"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:background="@color/cheque_background"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/linear_layout_cheque_sum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/cheque_total_string_background"
+                    android:text="@string/total_value_string"
+                    android:textSize="@dimen/text_big_size" />
+
+                <TextView
+                    android:id="@+id/text_view_cheque_sum"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:background="@color/cheque_total_string_background"
+                    android:text="@string/total_sum"
+                    android:textSize="@dimen/text_big_size" />
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/list_view_cheque_items"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/linear_layout_cheque_sum"
+                android:layout_alignParentTop="true"></ListView>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_layout_main_buttons"
+        android:layout_width="@dimen/linear_layout_main_buttons_width"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:background="@color/main_buttons_background"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/button_accept_cheque"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/accept_button_text" />
+
+        <Button
+            android:id="@+id/button_cancel_cheque"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/cancel_button_text" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/products_panel_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@id/linear_layout_main_buttons"
+        android:layout_toRightOf="@+id/linear_layout_cheque_panel"
+        android:background="@color/products_list_background"
+        android:orientation="vertical">
+
+        <GridView
+            android:id="@+id/grid_view_products"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/grid_view_products"></GridView>
+    </LinearLayout>
+</RelativeLayout>
